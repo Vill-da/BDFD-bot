@@ -1,0 +1,16 @@
+$nomention
+$globalCooldown[5s;you're on cooldown for %time%]
+$onlyIf[$guildID!=;You cannot run commands in Dm's!]
+$onlyIf[$isBot[$mentioned[<;yes]]!=true;Bots dont have balance lol]
+$title[$username[$mentioned[1;yes]]'s Balance]
+$description[
+**__Wallet__**: $numberSeparator[$getVar[Money;$mentioned[1;yes]];,]
+
+**__Bank__**: $numberSeparator[$getVar[Bank;$mentioned[1;yes]];,]]
+$footer[total: $numberSeparator[$sum[$getVar[Money;$authorID];$getVar[Bank;$authorID]]]]
+$color[ec4145]
+$thumbnail[$userAvatar[$mentioned[1;yes]]] 
+
+$c[
+Language: BDscript
+]

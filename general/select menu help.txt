@@ -1,0 +1,22 @@
+Code 1:
+Trigger: anything
+$title[help]
+$description[text you want it to say]
+$color[$random[11111;999999]]
+$c[this is where the select menu starts you can replace the name 'selectmenuhelp'(interaction ID) to ur own interaction ID]
+$newSelectMenu[selectmenuhelp;1;1;Select Menu]
+$addSelectMenuOption[selectmenuhelp;label1;value1+;description;no;🎬]
+$addSelectMenuOption[selectmenuhelp;label2;value2++;description;no;🎬]
+
+Code 2:
+Trigger: $onInteraction[help]
+ $if[$message==value1+]
+$title[help page 1]
+$description[text]
+$color[$random[111111;9999999]]
+$endif
+ $if[$message==value2++]
+$title[help page 2]
+$description[text]
+$color[$random[111111;9999999]]
+$endif
